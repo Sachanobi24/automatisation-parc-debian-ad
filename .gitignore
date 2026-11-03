@@ -1,0 +1,6 @@
+# Donnees propres a l'infrastructure : ne jamais publier
+hosts.txt
+macs.txt
+*.log
+.env
+*.key

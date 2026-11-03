@@ -1,0 +1,15 @@
+# Liste des postes cibles (une IP ou un nom d'hote par ligne).
+# Copier ce fichier en "hosts.txt" et l'adapter. Les lignes # sont ignorees.
+# Adresses fictives : le 3e octet correspond au VLAN (utilise par supervision/deploy-zabbix.sh).
+
+# --- VLAN 10 ---
+10.0.10.1
+10.0.10.2
+
+# --- VLAN 20 ---
+10.0.20.1
+10.0.20.2
+
+# --- VLAN 126 ---
+10.0.126.1
+10.0.126.2
