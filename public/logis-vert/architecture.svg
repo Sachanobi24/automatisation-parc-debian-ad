@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" role="img" aria-label="Architecture générale de l'infrastructure Logis Vert">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7a9ab8"/></marker></defs>
+<rect width="1000" height="460" fill="#071a2e"/>
+<g font-family="ui-monospace,Menlo,Consolas,monospace" fill="#e0f4ff">
+<text x="20" y="26" text-anchor="start" font-size="13" fill="#00d4ff">INFRASTRUCTURE LOGIS VERT — VUE D'ENSEMBLE</text>
+<rect x="20" y="44" width="250" height="396" rx="10" fill="none" stroke="#00d4ff" stroke-width="1.2" stroke-dasharray="6 5"/>
+<text x="32" y="62" font-size="11" fill="#00d4ff" letter-spacing="1">RESEAU MANAGEMENT (VLAN 40)</text>
+<rect x="50" y="70" width="190" height="44" rx="6" fill="#0a2240" stroke="#7a9ab8" stroke-width="1.5"/>
+<text x="145.0" y="89.0" text-anchor="middle" font-size="13" font-weight="bold">Internet / Passerelle</text>
+<text x="145.0" y="106.0" text-anchor="middle" font-size="10" fill="#7a9ab8">routeur</text>
+<rect x="50" y="150" width="190" height="48" rx="6" fill="#0a2240" stroke="#00d4ff" stroke-width="1.5"/>
+<text x="145.0" y="171.0" text-anchor="middle" font-size="13" font-weight="bold">Switch d'accès</text>
+<text x="145.0" y="188.0" text-anchor="middle" font-size="10" fill="#7a9ab8">VLAN 40 · uplinks LACP</text>
+<rect x="50" y="240" width="190" height="44" rx="6" fill="#0a2240" stroke="#7fff00" stroke-width="1.5"/>
+<text x="145.0" y="259.0" text-anchor="middle" font-size="13" font-weight="bold">ProxCenter</text>
+<text x="145.0" y="276.0" text-anchor="middle" font-size="10" fill="#7a9ab8">gestion &amp; supervision</text>
+<rect x="50" y="318" width="190" height="44" rx="6" fill="#0a2240" stroke="#ff6b35" stroke-width="1.5"/>
+<text x="145.0" y="337.0" text-anchor="middle" font-size="13" font-weight="bold">Serveur de sauvegarde</text>
+<text x="145.0" y="354.0" text-anchor="middle" font-size="10" fill="#7a9ab8">Proxmox Backup Server</text>
+<rect x="50" y="386" width="190" height="40" rx="6" fill="#0a2240" stroke="#7a9ab8" stroke-width="1.5"/>
+<text x="145.0" y="403.0" text-anchor="middle" font-size="13" font-weight="bold">Postes clients</text>
+<text x="145.0" y="420.0" text-anchor="middle" font-size="10" fill="#7a9ab8">domaine</text>
+<line x1="145" y1="114" x2="145" y2="150" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<line x1="145" y1="198" x2="145" y2="240" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<line x1="145" y1="284" x2="145" y2="318" stroke="#7a9ab8" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a)"/>
+<rect x="320" y="44" width="300" height="396" rx="10" fill="none" stroke="#7fff00" stroke-width="1.2" stroke-dasharray="6 5"/>
+<text x="332" y="62" font-size="11" fill="#7fff00" letter-spacing="1">CLUSTER PROXMOX VE (3 NOEUDS)</text>
+<rect x="350" y="82" width="240" height="84" rx="6" fill="#0a2240" stroke="#7fff00" stroke-width="1.5"/>
+<text x="470.0" y="121.0" text-anchor="middle" font-size="14" font-weight="bold">pve1</text>
+<text x="470.0" y="138.0" text-anchor="middle" font-size="11" fill="#7a9ab8">nœud Proxmox · bond0 + réseau Ceph</text>
+<rect x="350" y="190" width="240" height="84" rx="6" fill="#0a2240" stroke="#7fff00" stroke-width="1.5"/>
+<text x="470.0" y="229.0" text-anchor="middle" font-size="14" font-weight="bold">pve2</text>
+<text x="470.0" y="246.0" text-anchor="middle" font-size="11" fill="#7a9ab8">nœud Proxmox · bond0 + réseau Ceph</text>
+<rect x="350" y="298" width="240" height="84" rx="6" fill="#0a2240" stroke="#7fff00" stroke-width="1.5"/>
+<text x="470.0" y="337.0" text-anchor="middle" font-size="14" font-weight="bold">pve3</text>
+<text x="470.0" y="354.0" text-anchor="middle" font-size="11" fill="#7a9ab8">nœud Proxmox · bond0 + réseau Ceph</text>
+<text x="470" y="422" text-anchor="middle" font-size="10" fill="#7fff00">Haute disponibilité · migration à chaud des VM</text>
+<line x1="240" y1="174" x2="350" y2="124" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)" marker-start="url(#a)"/>
+<line x1="240" y1="174" x2="350" y2="232" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)" marker-start="url(#a)"/>
+<line x1="240" y1="174" x2="350" y2="340" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)" marker-start="url(#a)"/>
+<line x1="240" y1="340" x2="350" y2="340" stroke="#7a9ab8" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a)"/>
+<text x="295" y="333" text-anchor="middle" font-size="9" fill="#7a9ab8">backup</text>
+<rect x="670" y="44" width="310" height="300" rx="10" fill="none" stroke="#b48cff" stroke-width="1.2" stroke-dasharray="6 5"/>
+<text x="682" y="62" font-size="11" fill="#b48cff" letter-spacing="1">RESEAU CEPH DEDIE</text>
+<rect x="695" y="70" width="260" height="60" rx="6" fill="#0a2240" stroke="#b48cff" stroke-width="1.5"/>
+<text x="825.0" y="97.0" text-anchor="middle" font-size="14" font-weight="bold">stockage_ceph (RBD)</text>
+<text x="825.0" y="114.0" text-anchor="middle" font-size="11" fill="#7a9ab8">stockage partagé des VM</text>
+<rect x="695" y="158" width="80" height="64" rx="6" fill="#0a2240" stroke="#b48cff" stroke-width="1.5"/>
+<text x="735.0" y="187.0" text-anchor="middle" font-size="13" font-weight="bold">osd.0</text>
+<text x="735.0" y="204.0" text-anchor="middle" font-size="10" fill="#7a9ab8">HDD</text>
+<rect x="785" y="158" width="80" height="64" rx="6" fill="#0a2240" stroke="#b48cff" stroke-width="1.5"/>
+<text x="825.0" y="187.0" text-anchor="middle" font-size="13" font-weight="bold">osd.1</text>
+<text x="825.0" y="204.0" text-anchor="middle" font-size="10" fill="#7a9ab8">SSD</text>
+<rect x="875" y="158" width="80" height="64" rx="6" fill="#0a2240" stroke="#b48cff" stroke-width="1.5"/>
+<text x="915.0" y="187.0" text-anchor="middle" font-size="13" font-weight="bold">osd.2</text>
+<text x="915.0" y="204.0" text-anchor="middle" font-size="10" fill="#7a9ab8">SSD</text>
+<line x1="735" y1="130" x2="735" y2="158" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<line x1="825" y1="130" x2="825" y2="158" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<line x1="915" y1="130" x2="915" y2="158" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="695" y="252" width="125" height="60" rx="6" fill="#0a2240" stroke="#b48cff" stroke-width="1.5"/>
+<text x="757.5" y="279.0" text-anchor="middle" font-size="12" font-weight="bold">3 × MON</text>
+<text x="757.5" y="296.0" text-anchor="middle" font-size="9" fill="#7a9ab8">quorum</text>
+<rect x="830" y="252" width="125" height="60" rx="6" fill="#0a2240" stroke="#b48cff" stroke-width="1.5"/>
+<text x="892.5" y="279.0" text-anchor="middle" font-size="12" font-weight="bold">3 × MGR</text>
+<text x="892.5" y="296.0" text-anchor="middle" font-size="9" fill="#7a9ab8">1 actif</text>
+<line x1="590" y1="124" x2="695" y2="100" stroke="#b48cff" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a)" marker-start="url(#a)"/>
+<line x1="590" y1="232" x2="695" y2="190" stroke="#b48cff" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a)" marker-start="url(#a)"/>
+<line x1="590" y1="340" x2="695" y2="282" stroke="#b48cff" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="640" y="96" text-anchor="middle" font-size="9" fill="#b48cff">Ceph + Corosync</text>
+<rect x="670" y="360" width="310" height="80" rx="10" fill="none" stroke="#ff6b35" stroke-width="1.2" stroke-dasharray="6 5"/>
+<text x="682" y="378" font-size="11" fill="#ff6b35" letter-spacing="1">ISO DE DEPLOIEMENT</text>
+<rect x="690" y="382" width="130" height="44" rx="6" fill="#0a2240" stroke="#ff6b35" stroke-width="1.5"/>
+<text x="755.0" y="401.0" text-anchor="middle" font-size="12" font-weight="bold">NAS externe</text>
+<text x="755.0" y="418.0" text-anchor="middle" font-size="9" fill="#7a9ab8">images ISO</text>
+<rect x="835" y="382" width="125" height="44" rx="6" fill="#0a2240" stroke="#b48cff" stroke-width="1.5"/>
+<text x="897.5" y="401.0" text-anchor="middle" font-size="12" font-weight="bold">CephFS</text>
+<text x="897.5" y="418.0" text-anchor="middle" font-size="9" fill="#7a9ab8">secours ISO</text>
+<line x1="690" y1="404" x2="620" y2="404" stroke="#ff6b35" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a)"/>
+<line x1="620" y1="404" x2="590" y2="360" stroke="#ff6b35" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a)"/>
+<text x="655" y="452" text-anchor="middle" font-size="9" fill="#ff6b35">routage inter-VLAN</text>
+</g>
+</svg>

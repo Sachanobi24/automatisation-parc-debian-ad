@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-label="Architecture pfSense en haute disponibilité (CARP)">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#7a9ab8"/></marker></defs>
+<rect width="1000" height="560" fill="#071a2e"/>
+<g font-family="ui-monospace,Menlo,Consolas,monospace" fill="#e0f4ff">
+<text x="20" y="26" text-anchor="start" font-size="13" fill="#00d4ff">PARE-FEU PFSENSE EN HAUTE DISPONIBILITE (CARP) SUR PROXMOX VE</text>
+<rect x="20" y="235" width="130" height="70" rx="6" fill="#0a2240" stroke="#7a9ab8" stroke-width="1.5"/>
+<text x="85.0" y="267.0" text-anchor="middle" font-size="13" font-weight="bold">Switch d'accès</text>
+<text x="85.0" y="284.0" text-anchor="middle" font-size="10" fill="#7a9ab8">routeur / Internet</text>
+<rect x="195" y="235" width="120" height="70" rx="6" fill="#0a2240" stroke="#00d4ff" stroke-width="1.5"/>
+<text x="255.0" y="267.0" text-anchor="middle" font-size="13" font-weight="bold">Interface WAN</text>
+<text x="255.0" y="284.0" text-anchor="middle" font-size="10" fill="#7a9ab8">IP virtuelle CARP</text>
+<rect x="350" y="48" width="630" height="490" rx="10" fill="none" stroke="#7fff00" stroke-width="1.2" stroke-dasharray="6 5"/>
+<text x="362" y="66" font-size="11" fill="#7fff00" letter-spacing="1">HOTE PROXMOX VE</text>
+<rect x="385" y="110" width="160" height="64" rx="6" fill="#0a2240" stroke="#00d4ff" stroke-width="1.5"/>
+<text x="465.0" y="139.0" text-anchor="middle" font-size="13" font-weight="bold">pfSense MASTER</text>
+<text x="465.0" y="156.0" text-anchor="middle" font-size="10" fill="#7a9ab8">pfsync 10.0.99.1</text>
+<rect x="385" y="366" width="160" height="64" rx="6" fill="#0a2240" stroke="#b48cff" stroke-width="1.5"/>
+<text x="465.0" y="395.0" text-anchor="middle" font-size="13" font-weight="bold">pfSense BACKUP</text>
+<text x="465.0" y="412.0" text-anchor="middle" font-size="10" fill="#7a9ab8">pfsync 10.0.99.2</text>
+<line x1="465" y1="174" x2="465" y2="366" stroke="#ff6b35" stroke-width="1.4" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="472" y="262" text-anchor="start" font-size="11" fill="#ff6b35">pfsync</text>
+<text x="472" y="278" text-anchor="start" font-size="10" fill="#ff6b35">(VLAN 99 dédié)</text>
+<line x1="150" y1="270" x2="195" y2="270" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<line x1="315" y1="255" x2="385" y2="142" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<line x1="315" y1="285" x2="385" y2="398" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="600" y="236" width="110" height="64" rx="6" fill="#0a2240" stroke="#7fff00" stroke-width="1.5"/>
+<text x="655.0" y="265.0" text-anchor="middle" font-size="13" font-weight="bold">vmbr0</text>
+<text x="655.0" y="282.0" text-anchor="middle" font-size="10" fill="#7a9ab8">bridge VLAN-aware</text>
+<line x1="545" y1="142" x2="600" y2="258" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<line x1="545" y1="398" x2="600" y2="282" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="750" y="78" width="210" height="48" rx="6" fill="#0a2240" stroke="#00d4ff" stroke-width="1.5"/>
+<text x="855.0" y="99.0" text-anchor="middle" font-size="12" font-weight="bold">VLAN 10 — Services</text>
+<text x="855.0" y="116.0" text-anchor="middle" font-size="9" fill="#7a9ab8">192.168.10.1/24</text>
+<line x1="710" y1="268" x2="750" y2="102" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="855" y="144" text-anchor="middle" font-size="10" fill="#e0f4ff">• Debian (Docker)</text>
+<text x="855" y="158" text-anchor="middle" font-size="10" fill="#e0f4ff">• Zabbix</text>
+<rect x="750" y="182" width="210" height="48" rx="6" fill="#0a2240" stroke="#ff6b35" stroke-width="1.5"/>
+<text x="855.0" y="203.0" text-anchor="middle" font-size="12" font-weight="bold">VLAN 20 — Serveurs</text>
+<text x="855.0" y="220.0" text-anchor="middle" font-size="9" fill="#7a9ab8">192.168.20.1/24</text>
+<line x1="710" y1="268" x2="750" y2="206" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="855" y="248" text-anchor="middle" font-size="10" fill="#e0f4ff">• Contrôleur de domaine 1</text>
+<text x="855" y="262" text-anchor="middle" font-size="10" fill="#e0f4ff">• Contrôleur de domaine 2</text>
+<rect x="750" y="286" width="210" height="48" rx="6" fill="#0a2240" stroke="#7fff00" stroke-width="1.5"/>
+<text x="855.0" y="307.0" text-anchor="middle" font-size="12" font-weight="bold">VLAN 30 — Clients</text>
+<text x="855.0" y="324.0" text-anchor="middle" font-size="9" fill="#7a9ab8">192.168.30.1/24</text>
+<line x1="710" y1="268" x2="750" y2="310" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="855" y="352" text-anchor="middle" font-size="10" fill="#e0f4ff">• Poste Windows 10</text>
+<rect x="750" y="390" width="210" height="48" rx="6" fill="#0a2240" stroke="#b48cff" stroke-width="1.5"/>
+<text x="855.0" y="411.0" text-anchor="middle" font-size="12" font-weight="bold">VLAN 40 — Admin</text>
+<text x="855.0" y="428.0" text-anchor="middle" font-size="9" fill="#7a9ab8">192.168.40.1/24</text>
+<line x1="710" y1="268" x2="750" y2="414" stroke="#7a9ab8" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="855" y="456" text-anchor="middle" font-size="10" fill="#e0f4ff">• Poste d'administration</text>
+<rect x="750" y="486" width="210" height="40" rx="6" fill="#0a2240" stroke="#7a9ab8" stroke-width="1.5"/>
+<text x="855.0" y="503.0" text-anchor="middle" font-size="11" font-weight="bold">VLAN 99 — pfsync</text>
+<text x="855.0" y="520.0" text-anchor="middle" font-size="8" fill="#7a9ab8">réservé aux pare-feux</text>
+</g>
+</svg>
